@@ -2,6 +2,8 @@
 
 #### Uses: TypeScript, TailwindCSS, Redux-Toolkit
 
+![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=flat&logo=react) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white) ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=flat&logo=redux&logoColor=white)
+
 This project aims to be a strong foundation for react-native applications. It provides a clear and organized structure, core dependencies, and boilerplate to jumpstart development.
 
 ## Prerequisites
