@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "jsx": "react-native",
+    "paths": {
+      "components": ["./components"],
+      "assets": ["./assets"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": false
+  },
+  "extends": "@react-native/typescript-config/tsconfig.json"
+}
