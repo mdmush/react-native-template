@@ -76,7 +76,3 @@ For more info please go to https://reactnative.dev/docs/signed-apk-android
 4. Product -> Archive
 
 For more info please go to https://reactnative.dev/docs/publishing-to-app-store
-
-## Styleguide
-
-For coding styling, we decided to go with ESLint and [React Native community's styleguide](https://github.com/facebook/react-native/tree/master/packages/eslint-config-react-native-community#readme).
