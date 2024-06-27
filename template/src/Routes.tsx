@@ -21,6 +21,7 @@ import Tab1Screen from './tab-screens/Tab1Screen';
 import Tab2Screen from './tab-screens/Tab2Screen';
 import Tab3Screen from './tab-screens/Tab3Screen';
 import Tab4Screen from './tab-screens/Tab4Screen';
+import colors from 'constants/colors';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -68,7 +69,7 @@ function Dashboard() {
       <Text
         style={[
           { textAlign: 'center', fontSize: 11, marginTop: -5, marginBottom: 5 },
-          focused ? { color: '#ff3402', fontWeight: '600' } : {},
+          focused ? { color: colors.PRIMARY, fontWeight: '600' } : {},
         ]}>
         {labelName}
       </Text>
@@ -80,7 +81,7 @@ function Dashboard() {
         headerShown: false,
         tabBarIcon: ({ color }) => tabBarIcon({ color, route }),
         tabBarLabel: ({ focused }) => tabBarLabel({ focused, route }),
-        tabBarActiveTintColor: '#ff3402',
+        tabBarActiveTintColor: colors.PRIMARY,
         tabBarInactiveTintColor: 'gray',
         unmountOnBlur: true,
       })}>
