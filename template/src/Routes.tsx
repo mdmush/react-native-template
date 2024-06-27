@@ -10,6 +10,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome5';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
+import { persistor, store } from 'store/store';
+import { PersistGate } from 'redux-persist/integration/react';
 
 // Screens
 import Splashscreen from './screens/Splashscreen';
@@ -19,7 +21,6 @@ import Tab1Screen from './tab-screens/Tab1Screen';
 import Tab2Screen from './tab-screens/Tab2Screen';
 import Tab3Screen from './tab-screens/Tab3Screen';
 import Tab4Screen from './tab-screens/Tab4Screen';
-import { store } from 'store/store';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -95,17 +96,19 @@ function Routes() {
   return (
     <SafeAreaProvider>
       <Provider store={store}>
-        <NavigationContainer>
-          <Stack.Navigator
-            screenOptions={{
-              headerShown: false,
-              // animation: 'fade', // for fade transition
-              // animationDuration: 500, // for fade delay
-            }}>
-            <Stack.Screen name="Splashscreen" component={Splashscreen} />
-            <Stack.Screen name="Dashboard" component={Dashboard} />
-          </Stack.Navigator>
-        </NavigationContainer>
+        <PersistGate loading={null} persistor={persistor}>
+          <NavigationContainer>
+            <Stack.Navigator
+              screenOptions={{
+                headerShown: false,
+                // animation: 'fade', // for fade transition
+                // animationDuration: 500, // for fade delay
+              }}>
+              <Stack.Screen name="Splashscreen" component={Splashscreen} />
+              <Stack.Screen name="Dashboard" component={Dashboard} />
+            </Stack.Navigator>
+          </NavigationContainer>
+        </PersistGate>
       </Provider>
     </SafeAreaProvider>
   );
