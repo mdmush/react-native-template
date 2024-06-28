@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
 import { View, Text } from 'react-native';
 import Screen from 'components/Screen';
-import { useNavigation } from '@react-navigation/native';
-// import Header from 'components/Header';
+import { useNavigation, ParamListBase } from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import Header from 'components/Header';
 import { SPLASHSCREEN_TIMEOUT } from 'constants/config';
 import colors from 'constants/colors';
 
 const Splashscreen = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
   useEffect(() => {
     const timer = setTimeout(() => {
       navigation.navigate('Dashboard');
@@ -17,7 +18,7 @@ const Splashscreen = () => {
 
   return (
     <Screen
-      // header={<Header title="Hello" />}
+      header={<Header title="Hello" />}
       style={{ backgroundColor: colors.PRIMARY }}
       safeAreaBackgroundColor={colors.PRIMARY}>
       <View className="flex-1 justify-center items-center">
