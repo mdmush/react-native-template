@@ -1,3 +1,4 @@
+import React from "react";
 import { ViewProps } from 'react-native';
 
 export interface ScreenType extends ViewProps {
