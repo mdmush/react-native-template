@@ -6,6 +6,15 @@
 
 This project aims to be a strong foundation for react-native applications. It provides a clear and organized structure, core dependencies, and boilerplate to jumpstart development.
 
+## Usage
+
+Use the following script to generate a fresh React Native project with additional components already included. 
+Replace `AwesomeProject` with your app name.
+
+```
+npx react-native init AwesomeProject --template mdmush/react-native-template
+```
+
 ## Prerequisites
 
 - [Node.js > 18 | 19.5.0](https://nodejs.org) and npm (Recommended: Use [nvm](https://github.com/nvm-sh/nvm))
@@ -28,15 +37,6 @@ This project aims to be a strong foundation for react-native applications. It pr
 - [redux-persist](https://github.com/rt2zz/redux-persist) for persistence.
 - [redux-thunk](https://github.com/gaearon/redux-thunk) for dispatching asynchronous actions.
 - [jest](https://facebook.github.io/jest/) for testing.
-
-## Usage
-
-Use the following script to generate a fresh React Native project with additional components already included. 
-Replace `AwesomeProject` with your app name.
-
-```
-npx react-native init AwesomeProject --template mdmush/react-native-template
-```
 
 ## Folder structure
 
