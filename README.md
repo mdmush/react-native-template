@@ -12,7 +12,7 @@ Use the following script to generate a fresh React Native project with additiona
 Replace `AwesomeProject` with your app name.
 
 ```
-npx react-native init AwesomeProject --template mdmush/react-native-template
+npx @react-native-community/cli@latest init AwesomeProject --template mdmush/react-native-template
 ```
 
 ## Prerequisites
